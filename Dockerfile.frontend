@@ -1,0 +1,8 @@
+FROM node:10-slim
+LABEL maintainer="hello@wagtail.io"
+
+COPY ./wagtail/package.json ./package.json
+
+RUN npm i npm@latest -g
+RUN npm --prefix / install
+RUN npm install npm-run-all gulp webpack /
