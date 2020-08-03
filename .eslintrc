@@ -1,0 +1,19 @@
+{
+  "extends": "wagtail",
+
+  "env": {
+    "jest": true
+  },
+
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "client/webpack/prod.config.js"
+      }
+    }
+  },
+  
+  "rules": {
+    "no-underscore-dangle": ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }]
+  }
+}
